@@ -12,7 +12,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { DisplayCardComponent } from './components/display-card/display-card.component';
 import { DisplayCardService } from './services/display-card.service';
 import { CircleCardComponent } from './components/circle-card/circle-card.component';
-import { ProductViewComponent } from './product-view/product-view.component';
+import { ProductViewComponent } from './components/product-view/product-view.component';
 
 @NgModule({
   declarations: [AppComponent, CapsuleButtonComponent, DisplayCardComponent, CircleCardComponent, ProductViewComponent],
