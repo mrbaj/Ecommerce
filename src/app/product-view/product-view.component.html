@@ -1,0 +1,26 @@
+<div class="product-view">
+  <div class="product-view-title">
+    <span class="product-column product-item">Item</span>
+    <span class="product-column">Price</span>
+    <span class="product-column">Quantity</span>
+    <span class="product-column product-total">Total</span>
+  </div>
+  <div>
+    <mat-divider></mat-divider>
+    <div class="product-view-content">
+      <div class="product-column-image product-column">
+        <img [src]="imageUrl" class="product-view-image" />
+        <div>{{ imageDes }}</div>
+      </div>
+      <div class="product-column">${{ price }}</div>
+      <div class="product-column product-quantity">
+        <mat-icon>keyboard_arrow_down</mat-icon> {{ quantity
+        }}<mat-icon>keyboard_arrow_up</mat-icon>
+      </div>
+      <div class="product-column product-total">
+        ${{ total }}<mat-icon class="icon-close">close</mat-icon>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+  </div>
+</div>
