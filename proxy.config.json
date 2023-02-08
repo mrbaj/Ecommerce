@@ -1,0 +1,8 @@
+{
+  "/api/v3/*": {
+    "target": "http://api.bigcommerce.com/stores/1rzurzqyki/v3/",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}

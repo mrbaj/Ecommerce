@@ -1,0 +1,55 @@
+{
+  "data": [
+    {
+      "id": 265,
+      "product_id": 77,
+      "is_thumbnail": false,
+      "sort_order": 2,
+      "description": "",
+      "image_file": "%%SAMPLE%%/stencil/foglinenbeigestripetowel3b.jpg",
+      "url_zoom": "https://cdn11.bigcommerce.com/s-1rzurzqyki/products/77/images/265/foglinenbeigestripetowel3b.1675522264.1280.1280.jpg?c=1",
+      "url_standard": "https://cdn11.bigcommerce.com/s-1rzurzqyki/products/77/images/265/foglinenbeigestripetowel3b.1675522264.386.513.jpg?c=1",
+      "url_thumbnail": "https://cdn11.bigcommerce.com/s-1rzurzqyki/products/77/images/265/foglinenbeigestripetowel3b.1675522264.220.290.jpg?c=1",
+      "url_tiny": "https://cdn11.bigcommerce.com/s-1rzurzqyki/products/77/images/265/foglinenbeigestripetowel3b.1675522264.44.58.jpg?c=1",
+      "date_modified": "2023-02-04T14:51:04+00:00"
+    },
+    {
+      "id": 266,
+      "product_id": 77,
+      "is_thumbnail": true,
+      "sort_order": 0,
+      "description": "",
+      "image_file": "%%SAMPLE%%/stencil/foglinenbeigestripetowel1b.jpg",
+      "url_zoom": "https://cdn11.bigcommerce.com/s-1rzurzqyki/products/77/images/266/foglinenbeigestripetowel1b.1675522264.1280.1280.jpg?c=1",
+      "url_standard": "https://cdn11.bigcommerce.com/s-1rzurzqyki/products/77/images/266/foglinenbeigestripetowel1b.1675522264.386.513.jpg?c=1",
+      "url_thumbnail": "https://cdn11.bigcommerce.com/s-1rzurzqyki/products/77/images/266/foglinenbeigestripetowel1b.1675522264.220.290.jpg?c=1",
+      "url_tiny": "https://cdn11.bigcommerce.com/s-1rzurzqyki/products/77/images/266/foglinenbeigestripetowel1b.1675522264.44.58.jpg?c=1",
+      "date_modified": "2023-02-04T14:51:04+00:00"
+    },
+    {
+      "id": 267,
+      "product_id": 77,
+      "is_thumbnail": false,
+      "sort_order": 1,
+      "description": "",
+      "image_file": "%%SAMPLE%%/stencil/foglinenbeigestripetowel2b.jpg",
+      "url_zoom": "https://cdn11.bigcommerce.com/s-1rzurzqyki/products/77/images/267/foglinenbeigestripetowel2b.1675522264.1280.1280.jpg?c=1",
+      "url_standard": "https://cdn11.bigcommerce.com/s-1rzurzqyki/products/77/images/267/foglinenbeigestripetowel2b.1675522264.386.513.jpg?c=1",
+      "url_thumbnail": "https://cdn11.bigcommerce.com/s-1rzurzqyki/products/77/images/267/foglinenbeigestripetowel2b.1675522264.220.290.jpg?c=1",
+      "url_tiny": "https://cdn11.bigcommerce.com/s-1rzurzqyki/products/77/images/267/foglinenbeigestripetowel2b.1675522264.44.58.jpg?c=1",
+      "date_modified": "2023-02-04T14:51:04+00:00"
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "total": 3,
+      "count": 3,
+      "per_page": 50,
+      "current_page": 1,
+      "total_pages": 1,
+      "links": {
+        "current": "?page=1&limit=50"
+      }
+    }
+  }
+}
