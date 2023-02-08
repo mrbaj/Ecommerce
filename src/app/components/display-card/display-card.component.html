@@ -1,0 +1,12 @@
+<mat-card class="flex-card">
+  <img [src]="imageUrl" class="flex-card-image" />
+  <div class="flex-card-corner-div">
+    <p>{{ percentage }}% OFF</p>
+  </div>
+  <mat-card-content>
+    <h2 mat-card-title>{{ title }}</h2>
+    <p>Price: {{ price }}</p>
+    <mat-divider></mat-divider>
+    <p>Save: {{ save }}</p>
+  </mat-card-content>
+</mat-card>
