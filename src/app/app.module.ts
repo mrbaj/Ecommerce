@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { CapsuleButtonComponent } from './components/capsule-button/capsule-button.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
@@ -13,6 +13,9 @@ import { DisplayCardComponent } from './components/display-card/display-card.com
 import { DisplayCardService } from './services/display-card.service';
 import { CircleCardComponent } from './components/circle-card/circle-card.component';
 import { ProductViewComponent } from './components/product-view/product-view.component';
+import { HttpClientModule } from '@angular/common/http';
+import { RestService } from './rest.service';
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [AppComponent, CapsuleButtonComponent, DisplayCardComponent, CircleCardComponent, ProductViewComponent],
@@ -23,8 +26,9 @@ import { ProductViewComponent } from './components/product-view/product-view.com
     MatIconModule,
     MatCardModule,
     MatDividerModule,
+    HttpClientModule
   ],
-  providers: [DisplayCardService],
+  providers: [DisplayCardService,RestService, DataService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
