@@ -18,7 +18,8 @@
       "custom_url": {
         "url": "/bath/",
         "is_customized": false
-      }
+      },
+      "image": ""
     },
     {
       "id": 19,
@@ -38,7 +39,8 @@
       "custom_url": {
         "url": "/garden/",
         "is_customized": false
-      }
+      },
+      "image": ""
     },
     {
       "id": 20,
@@ -58,7 +60,8 @@
       "custom_url": {
         "url": "/publications/",
         "is_customized": false
-      }
+      },
+      "image": ""
     },
     {
       "id": 21,
@@ -78,7 +81,8 @@
       "custom_url": {
         "url": "/kitchen/",
         "is_customized": false
-      }
+      },
+      "image": ""
     },
     {
       "id": 22,
@@ -98,7 +102,8 @@
       "custom_url": {
         "url": "/utility/",
         "is_customized": false
-      }
+      },
+      "image": ""
     },
     {
       "id": 23,
@@ -118,7 +123,8 @@
       "custom_url": {
         "url": "/shop-all/",
         "is_customized": false
-      }
+      },
+      "image": ""
     }
   ],
   "meta": {
