@@ -1,12 +1,5 @@
-<div>
-  <app-capsule-button></app-capsule-button>
-  <app-display-card
-    [imageUrl]="imageUrl"
-    [title]="title"
-    [price]="price"
-    [save]="save"
-    [percentage]="percentage"
-  ></app-display-card>
-  <app-circle-card [imageUrl]="imageUrl" [title]="cardTile"></app-circle-card>
-  <app-product-view [productData]="productData"></app-product-view>
-</div>
+<app-header></app-header>
+
+<router-outlet></router-outlet>
+
+<app-footer></app-footer>

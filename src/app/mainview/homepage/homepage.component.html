@@ -1,1 +1,9 @@
-<p>homepage works!</p>
+<app-categorization
+  (categorySelected)="selectCategory($event)"
+></app-categorization>
+
+<app-advertisement></app-advertisement>
+
+<app-catalog-section
+  [categorySelected]="categorySelected"
+></app-catalog-section>

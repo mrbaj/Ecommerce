@@ -1,1 +1,10 @@
-<p>categorization works!</p>
+<div class="cateogry-container">
+  <div class="category-items" *ngFor="let category of data; let i = index">
+    <app-capsule-button
+      [buttonText]="category.name"
+      [isDark]="false"
+      [id]="category.id"
+      (click)="onClick($event)"
+    ></app-capsule-button>
+  </div>
+</div>
