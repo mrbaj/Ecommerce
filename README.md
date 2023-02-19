@@ -1,27 +1,73 @@
-# Ecommerce
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.5.
+///Angular topics
 
-## Development server
+routings
+    lazy loading
+        component loading
+        module loading
+        with route
+        without route
+    auth guards
+    children routes
+    wildcard routes
+    passing data
+    auxilary routes
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+pipes
+    pure
+    impure
+    async - how does it workd with onpush, with change detection
 
-## Code scaffolding
+Directives
+    inputs? outputs?
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+content prjections
+view projections
 
-## Build
+forms
+    template
+    reactive
+    validators ... rahul will create sample in day
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+dynamic components
 
-## Running unit tests
+events
+    passive events ... rahul will create sample in day
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+security
+    Dom sanitizer ... rahul will create sample in day
 
-## Running end-to-end tests
+Component Lifecycle
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Change Detection stratergy
 
-## Further help
+NgZone
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Polyfill ?
+
+APIs -- //Rahul
+    http client interceptors
+    headers
+    params
+
+
+-----------
+Type script
+
+Unions
+
+
+------------
+Java script
+
+event loops
+this
+hoisting
+event bubbling
+
+
+-------------
+CSS
+
+-------------
+RxJS

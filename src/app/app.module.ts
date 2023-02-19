@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { CapsuleButtonComponent } from './components/capsule-button/capsule-button.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
@@ -15,11 +14,11 @@ import { ProductViewComponent } from './components/product-view/product-view.com
 import { HttpClientModule } from '@angular/common/http';
 import { RestService } from './rest.service';
 import { DataService } from './data.service';
+import { MainviewModule } from './mainview/mainview.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CapsuleButtonComponent,
     DisplayCardComponent,
     CircleCardComponent,
     ProductViewComponent,
@@ -32,6 +31,7 @@ import { DataService } from './data.service';
     MatCardModule,
     MatDividerModule,
     HttpClientModule,
+    MainviewModule,
   ],
   providers: [RestService, DataService],
   bootstrap: [AppComponent],

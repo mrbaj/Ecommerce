@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { filter, map } from 'rxjs';
+import { filter, from, map, Observable, switchMap } from 'rxjs';
 import './modal';
 
 @Injectable({
@@ -10,29 +10,33 @@ export class RestService {
   auth_Token = 'iv1utjpugfhle558si7btfemces24z2';
   rest_Url = '/api/';
 
-  constructor(private http: HttpClient) {
-    this.getProductsCategoryAssignments();
+  constructor(private http: HttpClient) {}
+
+  getAllProducts(): Observable<[product]> {
+    return this.http
+      .get<ProductData>('./assets/products.json')
+      .pipe(map((res) => res.data));
   }
 
-  getAllProducts() {
-    this.http.get<JsonData>('./assets/products.json').subscribe((res) => {
-      return res.data;
-    });
+  checkProductsCategoryAssignments(
+    cid: any,
+    pid: any
+  ): Observable<PCAssignment> {
+    return this.http
+      .get<PCAssignmentData>('./assets/productCategoryAssignments.json')
+      .pipe(
+        map((res) => res.data),
+        switchMap((res) => from(res)),
+        filter((res: PCAssignment) => {
+          return res.product_id == pid && res.category_id == cid;
+        })
+      );
   }
 
-  getProductsCategoryAssignments() {
-    this.http
-      .get<JsonData>('./assets/productCategoryAssignments.json')
-      .subscribe((res) => {
-        console.log(res.data);
-        return res.data;
-      });
-  }
-
-  getAllCategories() {
-    this.http.get<JsonData>('./assets/categories.json').subscribe((res) => {
-      return res.data;
-    });
+  getAllCategories(): Observable<[category]> {
+    return this.http
+      .get<CategoryData>('./assets/categories.json')
+      .pipe(map((res) => res.data));
   }
 
   getReviews(productId: number) {

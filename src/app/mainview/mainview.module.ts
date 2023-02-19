@@ -6,9 +6,7 @@ import { FooterComponent } from './footer/footer.component';
 import { CatalogSectionComponent } from './catalog-section/catalog-section.component';
 import { CategorizationComponent } from './categorization/categorization.component';
 import { AdvertisementComponent } from './advertisement/advertisement.component';
-
-
-
+import { CapsuleButtonComponent } from '../components/capsule-button/capsule-button.component';
 @NgModule({
   declarations: [
     HomepageComponent,
@@ -16,10 +14,10 @@ import { AdvertisementComponent } from './advertisement/advertisement.component'
     FooterComponent,
     CatalogSectionComponent,
     CategorizationComponent,
-    AdvertisementComponent
+    AdvertisementComponent,
+    CapsuleButtonComponent,
   ],
-  imports: [
-    CommonModule
-  ]
+  imports: [CommonModule],
+  exports: [HomepageComponent, HeaderComponent, FooterComponent],
 })
-export class MainviewModule { }
+export class MainviewModule {}

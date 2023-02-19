@@ -9,7 +9,8 @@ export class CapsuleButtonComponent {
   @Input() buttonText: string = 'Flexi Button';
   @Input() buttonColor: string = '#F3F9FB';
   @Input() textColor: string = '#000000';
-  isDark: boolean = false;
+  @Input() isDark: boolean = false;
+  @Input() id?: number;
 
   updateButtonStyles() {
     this.isDark = !this.isDark;
