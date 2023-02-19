@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { CircleCardService } from 'src/app/services/circle-card.service';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-circle-card',
@@ -7,14 +6,8 @@ import { CircleCardService } from 'src/app/services/circle-card.service';
   styleUrls: ['./circle-card.component.css'],
 })
 export class CircleCardComponent {
-  imageUrl?: string;
-  title?: string;
-  constructor(private dataService: CircleCardService) {}
+  @Input() imageUrl?: string;
+  @Input() title?: string;
 
-  ngOnInit(): void {
-    this.dataService.getData().subscribe((data) => {
-      this.imageUrl = data.imageUrl;
-      this.title = data.title;
-    });
-  }
+  constructor() {}
 }

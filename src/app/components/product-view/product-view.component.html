@@ -9,16 +9,16 @@
     <mat-divider></mat-divider>
     <div class="product-view-content">
       <div class="product-column-image product-column">
-        <img [src]="imageUrl" class="product-view-image" />
-        <div>{{ imageDes }}</div>
+        <img [src]="productData.imageUrl" class="product-view-image" />
+        <div>{{ productData.imageDes }}</div>
       </div>
-      <div class="product-column">${{ price }}</div>
+      <div class="product-column">${{ productData.price }}</div>
       <div class="product-column product-quantity">
-        <mat-icon>keyboard_arrow_down</mat-icon> {{ quantity
-        }}<mat-icon>keyboard_arrow_up</mat-icon>
+        <mat-icon>keyboard_arrow_down</mat-icon> {{ productData.quantity }}
+        <mat-icon>keyboard_arrow_up</mat-icon>
       </div>
       <div class="product-column product-total">
-        ${{ total }}<mat-icon class="icon-close">close</mat-icon>
+        ${{ productData.total }}<mat-icon class="icon-close">close</mat-icon>
       </div>
     </div>
     <mat-divider></mat-divider>

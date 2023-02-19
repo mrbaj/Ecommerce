@@ -10,7 +10,6 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 
 import { DisplayCardComponent } from './components/display-card/display-card.component';
-import { DisplayCardService } from './services/display-card.service';
 import { CircleCardComponent } from './components/circle-card/circle-card.component';
 import { ProductViewComponent } from './components/product-view/product-view.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -18,7 +17,13 @@ import { RestService } from './rest.service';
 import { DataService } from './data.service';
 
 @NgModule({
-  declarations: [AppComponent, CapsuleButtonComponent, DisplayCardComponent, CircleCardComponent, ProductViewComponent],
+  declarations: [
+    AppComponent,
+    CapsuleButtonComponent,
+    DisplayCardComponent,
+    CircleCardComponent,
+    ProductViewComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -26,9 +31,9 @@ import { DataService } from './data.service';
     MatIconModule,
     MatCardModule,
     MatDividerModule,
-    HttpClientModule
+    HttpClientModule,
   ],
-  providers: [DisplayCardService,RestService, DataService],
+  providers: [RestService, DataService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

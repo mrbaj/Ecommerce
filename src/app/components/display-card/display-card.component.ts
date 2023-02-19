@@ -1,27 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { DisplayCardService } from 'src/app/services/display-card.service';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-display-card',
   templateUrl: './display-card.component.html',
   styleUrls: ['./display-card.component.css'],
 })
-export class DisplayCardComponent implements OnInit {
-  imageUrl?: string;
-  title?: string;
-  price?: string;
-  save?: string;
-  percentage?: string;
+export class DisplayCardComponent {
+  @Input() imageUrl?: string;
+  @Input() title?: string;
+  @Input() price?: string;
+  @Input() save?: string;
+  @Input() percentage?: string;
 
-  constructor(private dataService: DisplayCardService) {}
-
-  ngOnInit(): void {
-    this.dataService.getData().subscribe((data) => {
-      this.imageUrl = data.imageUrl;
-      this.title = data.title;
-      this.price = data.price;
-      this.save = data.save;
-      this.percentage = data.percentage;
-    });
-  }
+  constructor() {}
 }
