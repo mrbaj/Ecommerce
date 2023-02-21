@@ -8,9 +8,9 @@ import { Component, Input } from '@angular/core';
 export class DisplayCardComponent {
   @Input() imageUrl?: string;
   @Input() title?: string;
-  @Input() price?: string;
-  @Input() save?: string;
-  @Input() percentage?: string;
+  @Input() price?: number;
+  @Input() save?: number;
+  @Input() percentage?: number;
 
   constructor() {}
 }

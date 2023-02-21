@@ -1,1 +1,12 @@
-<p>catalog-section works!</p>
+<div
+  class="container w-75 p-0 d-flex flex-wrap justify-content-center align-items-center"
+>
+  <div class="card-items" *ngFor="let product of products; let i = index">
+    <app-display-card
+      [imageUrl]="product.image"
+      [price]="product.price"
+      [save]="product.sale_price"
+      [percentage]="product.fixed_cost_shipping_price"
+    ></app-display-card>
+  </div>
+</div>

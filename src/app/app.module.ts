@@ -8,21 +8,17 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 
-import { DisplayCardComponent } from './components/display-card/display-card.component';
 import { CircleCardComponent } from './components/circle-card/circle-card.component';
 import { ProductViewComponent } from './components/product-view/product-view.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RestService } from './rest.service';
 import { DataService } from './data.service';
 import { MainviewModule } from './mainview/mainview.module';
+import { MatInputModule } from '@angular/material/input';
+import { TopbarComponent } from './components/topbar/topbar.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    DisplayCardComponent,
-    CircleCardComponent,
-    ProductViewComponent,
-  ],
+  declarations: [AppComponent, CircleCardComponent, ProductViewComponent, TopbarComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -32,6 +28,7 @@ import { MainviewModule } from './mainview/mainview.module';
     MatDividerModule,
     HttpClientModule,
     MainviewModule,
+    MatInputModule,
   ],
   providers: [RestService, DataService],
   bootstrap: [AppComponent],

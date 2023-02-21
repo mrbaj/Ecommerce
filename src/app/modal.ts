@@ -18,6 +18,11 @@ interface CategoryData {
   meta: {};
 }
 
+interface AllCategoryData {
+  data: [allcategory];
+  meta: {};
+}
+
 interface ProductData {
   data: [product];
   meta: {};
@@ -25,7 +30,7 @@ interface ProductData {
 
 interface product {
   id: 77;
-  name: '[Sample] Fog Linen Chambray Towel - Beige Stripe';
+  name: string;
   type: 'physical';
   sku: 'SLCTBS';
   description: '<p>The perfect beach towel: thin, lightweight and highly absorbent. Crafted by Fog Linen in Japan using soft Lithuanian linen, each towel rolls up for compact stowaway. Dry off after a refreshing dip in the ocean and stretch out on it for a sun bath. The thinness ensures a quick dry so you can have it rolled back up in your bag without soaking your belongings.</p>\n<p>Measures 75 x 145 cm/29.5 x 57 in</p>\n<p>100% Linen</p>';
@@ -41,7 +46,7 @@ interface product {
   tax_class_id: 0;
   product_tax_code: '';
   calculated_price: 49;
-  categories: [23, 18];
+  categories: number[];
   brand_id: 0;
   option_set_id: 14;
   option_set_display: 'right';
@@ -94,8 +99,14 @@ interface product {
   open_graph_use_meta_description: true;
   open_graph_use_product_name: true;
   open_graph_use_image: true;
+  image: string;
+  category: number;
 }
 
+interface allcategory {
+  category_id: 1;
+  product_id: 77;
+}
 interface category {
   id: 19;
   parent_id: 0;

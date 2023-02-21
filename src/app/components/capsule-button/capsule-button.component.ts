@@ -11,8 +11,4 @@ export class CapsuleButtonComponent {
   @Input() textColor: string = '#000000';
   @Input() isDark: boolean = false;
   @Input() id?: number;
-
-  updateButtonStyles() {
-    this.isDark = !this.isDark;
-  }
 }

@@ -12,25 +12,16 @@ export class RestService {
 
   constructor(private http: HttpClient) {}
 
-  getAllProducts(): Observable<[product]> {
+  getAllProducts(): Observable<product[]> {
     return this.http
       .get<ProductData>('./assets/products.json')
       .pipe(map((res) => res.data));
   }
 
-  checkProductsCategoryAssignments(
-    cid: any,
-    pid: any
-  ): Observable<PCAssignment> {
+  getProductsCategoryAssignments(): Observable<[allcategory]> {
     return this.http
-      .get<PCAssignmentData>('./assets/productCategoryAssignments.json')
-      .pipe(
-        map((res) => res.data),
-        switchMap((res) => from(res)),
-        filter((res: PCAssignment) => {
-          return res.product_id == pid && res.category_id == cid;
-        })
-      );
+      .get<AllCategoryData>('./assets/productCategoryAssignments.json')
+      .pipe(map((res) => res.data));
   }
 
   getAllCategories(): Observable<[category]> {
@@ -40,28 +31,15 @@ export class RestService {
   }
 
   getReviews(productId: number) {
-    this.http
-      .get<ReviewData>('./assets/reviews.json')
-      .pipe(
-        map((a) => a.data),
-        map((a) => a.filter((a) => a.product_id == productId))
-      )
-      .subscribe((res) => {
-        console.log(res);
-        return res;
-      });
+    return this.http.get<ReviewData>('./assets/reviews.json').pipe(
+      map((a) => a.data),
+      map((a) => a.filter((a) => a.product_id == productId))
+    );
   }
 
-  getProductImages(productId: number) {
-    this.http
+  getProductImages(): Observable<[ProductImage]> {
+    return this.http
       .get<ProductImageData>('./assets/productimages.json')
-      .pipe(
-        map((a) => a.data),
-        map((a) => a.filter((a) => a.product_id == productId))
-      )
-      .subscribe((res) => {
-        console.log(res);
-        return res;
-      });
+      .pipe(map((a) => a.data));
   }
 }

@@ -1,5 +1,28 @@
-<div class="header-container">
-  <div class="header-item">Mega Mart</div>
-  <div class="header-item">Search</div>
-  <div class="header-item">cart</div>
+<div
+  class="container w-75 p-0 d-flex justify-content-between align-items-center"
+>
+  <div class="logo">
+    <div class="logo-icon-parent">
+      <mat-icon class="logo-icon">menu</mat-icon>
+    </div>
+    <div class="header-item">MegaMart</div>
+  </div>
+  <div class="d-flex flex-row w-50 align-items-center justify-content-between">
+    <div
+      class="form-control d-flex px-3 my-3 w-50 align-items-center justify-content-between input-container"
+    >
+      <mat-icon matSuffix>search</mat-icon>
+      <input class="w-100 border-0 px-3" type="text" placeholder="Search" />
+      <mat-icon matPrefix>list_outlined_icon</mat-icon>
+    </div>
+    <div class="d-flex flex-row align-items-center">
+      <mat-icon class="px-1">person_2_outlined_icon</mat-icon>
+      <div>Sign Up/Sign In</div>
+    </div>
+    <span class="px-1 fs-5 fw-lighter" style="color: #d9d9d9">|</span>
+    <div class="d-flex flex-row align-items-center">
+      <mat-icon class="px-1">shopping_cart_outlined_icon</mat-icon>
+      <div class="header-item">Cart</div>
+    </div>
+  </div>
 </div>
