@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { RestService } from './rest.service';
 
 @Component({
@@ -14,7 +15,7 @@ export class AppComponent {
   save: string;
   percentage: string;
   productData: object;
-  constructor(private rest: RestService) {
+  constructor(private rest: RestService, private router: Router) {
     this.imageUrl = 'https://via.placeholder.com/300x200';
     this.cardTile = 'Example Title';
     this.price = '50';
@@ -27,5 +28,10 @@ export class AppComponent {
       quantity: '50',
       total: '50',
     };
+  }
+
+  isNotLoginPage(): boolean {
+    const currentRoute = this.router.url;
+    return !currentRoute.includes('login');
   }
 }

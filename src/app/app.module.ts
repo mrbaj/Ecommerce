@@ -16,9 +16,10 @@ import { DataService } from './data.service';
 import { MainviewModule } from './mainview/mainview.module';
 import { MatInputModule } from '@angular/material/input';
 import { TopbarComponent } from './components/topbar/topbar.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
-  declarations: [AppComponent, CircleCardComponent, ProductViewComponent, TopbarComponent],
+  declarations: [AppComponent, CircleCardComponent, ProductViewComponent, TopbarComponent, LoginComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
