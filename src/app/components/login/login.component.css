@@ -1,0 +1,12 @@
+.input-container {
+  background-color: #f3f9fb;
+  border: none;
+}
+
+input {
+  background-color: #f3f9fb;
+  outline: none;
+  color: #666666;
+  font-size: small;
+  font-weight: normal;
+}

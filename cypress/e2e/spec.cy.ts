@@ -4,13 +4,13 @@ describe('Login page', () => {
   });
 
   it('should allow user to type in username and password fields', () => {
-    cy.get('input[placeholder="Username"]').type('testuser');
-    cy.get('input[placeholder="Password"]').type('testpass');
+    cy.get('input[placeholder="Username"]').type('myusername');
+    cy.get('input[placeholder="Password"]').type('myusername');
   });
 
   it('should allow user to sign in', () => {
-    cy.get('input[placeholder="Username"]').type('testuser');
-    cy.get('input[placeholder="Password"]').type('testpass');
+    cy.get('input[placeholder="Username"]').type('myusername');
+    cy.get('input[placeholder="Password"]').type('mypassword');
     cy.contains('Sign In').click();
     cy.url().should('eq', 'http://localhost:4200/home'); // Assumes successful login should redirect to '/home'
   });

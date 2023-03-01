@@ -16,7 +16,7 @@ input {
 }
 
 mat-icon {
-  color: #008ecc;
+  color: var(--brand_blue);
   border: none;
   padding: 0;
   margin: 0;
@@ -29,7 +29,7 @@ mat-icon {
 }
 
 .logo {
-  color: #008ecc;
+  color: var(--brand_blue);
   border: none;
   padding: 0;
   margin: 0;
@@ -42,7 +42,7 @@ mat-icon {
 }
 
 .logo-icon {
-  color: #008ecc;
+  color: var(--brand_blue);
   border: none;
   padding: 0;
   margin: 0;

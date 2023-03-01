@@ -16,10 +16,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
 
   signIn() {
-    console.log('sign in');
     if (this.username === 'myusername' && this.password === 'mypassword') {
-      console.log('sign in');
-
       this.router.navigate(['/home']);
     } else {
       this.error = 'Invalid username or password';
@@ -28,5 +25,6 @@ export class LoginComponent implements OnInit {
 
   signOut() {
     // logic to sign out the user
+    this.router.navigate(['/login']);
   }
 }

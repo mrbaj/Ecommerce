@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatButtonModule } from '@angular/material/button';
 
 import { CircleCardComponent } from './components/circle-card/circle-card.component';
 import { ProductViewComponent } from './components/product-view/product-view.component';
@@ -37,6 +38,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     MainviewModule,
     MatInputModule,
+    MatButtonModule,
     FormsModule,
   ],
   providers: [RestService, DataService],
