@@ -17,9 +17,16 @@ import { MainviewModule } from './mainview/mainview.module';
 import { MatInputModule } from '@angular/material/input';
 import { TopbarComponent } from './components/topbar/topbar.component';
 import { LoginComponent } from './components/login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, CircleCardComponent, ProductViewComponent, TopbarComponent, LoginComponent],
+  declarations: [
+    AppComponent,
+    CircleCardComponent,
+    ProductViewComponent,
+    TopbarComponent,
+    LoginComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -30,6 +37,7 @@ import { LoginComponent } from './components/login/login.component';
     HttpClientModule,
     MainviewModule,
     MatInputModule,
+    FormsModule,
   ],
   providers: [RestService, DataService],
   bootstrap: [AppComponent],

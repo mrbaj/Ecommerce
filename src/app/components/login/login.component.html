@@ -2,14 +2,28 @@
   <form class="mat-elevation-z4 p-5">
     <h2 class="mb-4">Login</h2>
     <mat-form-field class="w-100">
-      <input matInput placeholder="Username" />
+      <input
+        matInput
+        placeholder="Username"
+        type="username"
+        [(ngModel)]="username"
+        name="username"
+      />
     </mat-form-field>
     <mat-form-field class="w-100">
-      <input matInput type="password" placeholder="Password" />
+      <input
+        matInput
+        placeholder="Psername"
+        type="password"
+        [(ngModel)]="password"
+        name="password"
+      />
     </mat-form-field>
     <div class="d-flex justify-content-center mt-4">
-      <button mat-raised-button color="primary" class="mx-2">Sign In</button>
-      <button mat-raised-button color="warn" class="mx-2">Sign Out</button>
+      <button mat-flat-button color="primary" class="mx-2" (click)="signIn()">
+        Sign In
+      </button>
+      <button mat-flat-button color="warn" class="mx-2">Sign Out</button>
     </div>
   </form>
 </div>
