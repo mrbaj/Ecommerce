@@ -1,5 +1,27 @@
-<app-header></app-header>
+<ng-container *ngIf="isNotLoginPage()">
+  <div
+    class="container-fluid m-0 p-0 align-items-center"
+    style="background-color: #f5f5f5"
+  >
+    <app-topbar></app-topbar>
+  </div>
+</ng-container>
 
-<router-outlet></router-outlet>
+<ng-container *ngIf="isNotLoginPage()">
+  <div class="container-fluid m-0 p-0 align-items-center">
+    <app-header></app-header>
+  </div>
+</ng-container>
 
-<app-footer></app-footer>
+<router-outlet
+  class="container-fluid m-0 p-0 align-items-center"
+></router-outlet>
+
+<ng-container *ngIf="isNotLoginPage()">
+  <div
+    class="container-fluid m-0 p-0 align-items-center"
+    style="background-color: var(--brand_blue)"
+  >
+    <app-footer></app-footer>
+  </div>
+</ng-container>

@@ -1,10 +1,14 @@
-<div class="cateogry-container">
+<mat-divider></mat-divider>
+<div
+  class="container w-75 p-0 d-flex justify-content-between align-items-center"
+>
   <div class="category-items" *ngFor="let category of data; let i = index">
     <app-capsule-button
+      [isDark]="category.id === selectedId"
       [buttonText]="category.name"
-      [isDark]="false"
       [id]="category.id"
-      (click)="onClick($event)"
+      (click)="onClick(category?.id, $event)"
     ></app-capsule-button>
   </div>
 </div>
+<mat-divider></mat-divider>

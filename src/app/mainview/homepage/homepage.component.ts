@@ -13,9 +13,7 @@ export class HomepageComponent implements OnInit {
 
   constructor(private rest: RestService) {}
 
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+  ngOnInit(): void {}
 
   selectCategory(event: any) {
     console.log('homePage', event);

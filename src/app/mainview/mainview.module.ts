@@ -7,9 +7,16 @@ import { CatalogSectionComponent } from './catalog-section/catalog-section.compo
 import { CategorizationComponent } from './categorization/categorization.component';
 import { AdvertisementComponent } from './advertisement/advertisement.component';
 import { CapsuleButtonComponent } from '../components/capsule-button/capsule-button.component';
+import { DisplayCardComponent } from '../components/display-card/display-card.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatInputModule } from '@angular/material/input';
+
 @NgModule({
   declarations: [
     HomepageComponent,
+    DisplayCardComponent,
     HeaderComponent,
     FooterComponent,
     CatalogSectionComponent,
@@ -17,7 +24,19 @@ import { CapsuleButtonComponent } from '../components/capsule-button/capsule-but
     AdvertisementComponent,
     CapsuleButtonComponent,
   ],
-  imports: [CommonModule],
-  exports: [HomepageComponent, HeaderComponent, FooterComponent],
+  imports: [
+    CommonModule,
+    MatDividerModule,
+    MatCardModule,
+    MatInputModule,
+    MatIconModule,
+  ],
+  exports: [
+    HomepageComponent,
+    HeaderComponent,
+    FooterComponent,
+    MatInputModule,
+    MatIconModule,
+  ],
 })
 export class MainviewModule {}

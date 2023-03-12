@@ -5,9 +5,20 @@ import {
   OnInit,
   SimpleChanges,
 } from '@angular/core';
-import { filter, from, of, switchMap, tap } from 'rxjs';
-import { RestService } from 'src/app/rest.service';
+import {
+  defer,
+  filter,
+  forkJoin,
+  from,
+  iif,
+  map,
+  of,
+  switchMap,
+  tap,
+} from 'rxjs';
+import { Router } from '@angular/router';
 
+import { RestService } from 'src/app/rest.service';
 @Component({
   selector: 'app-catalog-section',
   templateUrl: './catalog-section.component.html',
@@ -16,10 +27,16 @@ import { RestService } from 'src/app/rest.service';
 export class CatalogSectionComponent implements OnInit, OnChanges {
   @Input() categorySelected?: number;
   products: product[] = [];
+  images = [];
 
-  constructor(private rest: RestService) {}
+  constructor(private restService: RestService) {}
+
   ngOnChanges(changes: SimpleChanges): void {
-    this.refreshProducts();
+    console.log('onChanges Work');
+    console.log('category selected', this.categorySelected);
+    if (this.categorySelected != changes['categorySelected'].previousValue) {
+      this.refreshProducts();
+    }
   }
 
   ngOnInit(): void {
@@ -28,30 +45,31 @@ export class CatalogSectionComponent implements OnInit, OnChanges {
 
   refreshProducts() {
     this.products = [];
-    if (this.categorySelected == 9999) {
-      this.rest.getAllProducts().subscribe((res) => {
-        this.products = res;
+    forkJoin([
+      this.restService.getAllProducts(),
+      this.restService.getProductImages(),
+    ])
+      .pipe(
+        switchMap((value) => {
+          let products = value[0];
+          let images = value[1];
+          products.forEach(function (prodItem) {
+            images.forEach(function (imgItem) {
+              if (prodItem.id == imgItem.product_id) {
+                prodItem.image = imgItem.url_standard;
+              }
+            });
+          });
+          if (this.categorySelected !== 9999) {
+            products = products.filter((item) => {
+              return item.categories?.includes(this.categorySelected!);
+            });
+          }
+          return of(products);
+        })
+      )
+      .subscribe((value: any) => {
+        this.products = value;
       });
-    } else {
-      this.rest
-        .getAllProducts()
-        .pipe(
-          switchMap((res) => from(res)),
-          filter((res) => {
-            return this.checkProductinCategory(res.id, this.categorySelected);
-          })
-        )
-        .subscribe((res) => {
-          this.products.push(res);
-        });
-    }
-    console.log(this.products);
-  }
-
-  checkProductinCategory(pId: any, cId: any): boolean {
-    this.rest.checkProductsCategoryAssignments(pId, cId).subscribe((res) => {
-      if (cId == res.category_id && pId == res.product_id) return true;
-      else return false;
-    });
   }
 }
