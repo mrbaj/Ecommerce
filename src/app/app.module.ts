@@ -19,6 +19,7 @@ import { MatInputModule } from '@angular/material/input';
 import { TopbarComponent } from './components/topbar/topbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
+import { ProductViewPageComponent } from './components/product-view-page/product-view-page.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FormsModule } from '@angular/forms';
     ProductViewComponent,
     TopbarComponent,
     LoginComponent,
+    ProductViewPageComponent,
   ],
   imports: [
     BrowserModule,
