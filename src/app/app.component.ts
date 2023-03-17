@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { RestService } from './rest.service';
 
@@ -8,6 +8,10 @@ import { RestService } from './rest.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  isFixedFooter = false;
+  contentHeight = document.body.clientHeight;
+  viewportHeight = window.innerHeight;
+
   title = 'Ecommerce';
   imageUrl: any;
   cardTile: any;

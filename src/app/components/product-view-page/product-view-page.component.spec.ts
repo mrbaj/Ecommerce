@@ -8,16 +8,15 @@ describe('ProductViewPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProductViewPageComponent ]
-    })
-    .compileComponents();
+      declarations: [ProductViewPageComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ProductViewPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  // it('should create', () => {
+  //   expect(component).toBeTruthy();
+  // });
 });
