@@ -1,1 +1,49 @@
-<h1>Product View</h1>
+<div class="flex-row">
+  <div class="details">
+    <div>
+      <img src="{{ imgURL }}" />
+    </div>
+    <div class="options flex-row">
+      <div *ngFor="let image of images; let i = index">
+        <img
+          class="img-options"
+          [ngClass]="active == image.id ? 'active' : ''"
+          src="{{ image.url_thumbnail }}"
+          (click)="changeImage(image.id)"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="details">
+    <h1>{{ product.name }}</h1>
+    <div>item#{{ product.id }}</div>
+    <div>currently in stock</div>
+    <div>
+      <h2>${{ product.price }}</h2>
+    </div>
+    <div class="blue">
+      <span *ngFor="let loop3 of counter(product.reviews_rating_sum)">
+        <i class="bi bi-star-fill"></i>
+      </span>
+      <span *ngFor="let loop3 of counter(5 - product.reviews_rating_sum)"
+        ><i class="bi bi-star"></i
+      ></span>
+      ({{ product.reviews_count }} reviews)
+    </div>
+    <h3>{{ product.description }}</h3>
+    <div>
+      QTY: <mat-icon class="arrow">keyboard_arrow_down</mat-icon> 1
+      <mat-icon class="arrow">keyboard_arrow_up</mat-icon>
+    </div>
+    <div>
+      <button
+        type="button"
+        class="btn mt-3 fw-lighter fs-6"
+        style="background-color: var(--brand_blue); color: white"
+        mat-button
+      >
+        Add To Cart
+      </button>
+    </div>
+  </div>
+</div>
