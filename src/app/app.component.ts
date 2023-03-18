@@ -8,7 +8,6 @@ import { RestService } from './rest.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  isFixedFooter = false;
   contentHeight = document.body.clientHeight;
   viewportHeight = window.innerHeight;
 

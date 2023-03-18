@@ -1,17 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MinViewComponent } from './min-view/min-view.component';
-import { DetailViewComponent } from './detail-view/detail-view.component';
-
-
+import { CartDetailedViewComponent } from './cart-detailed-view/cart-detailed-view.component';
+import { CartMinifiedViewComponent } from './cart-minified-view/cart-minified-view.component';
 
 @NgModule({
-  declarations: [
-    MinViewComponent,
-    DetailViewComponent
-  ],
-  imports: [
-    CommonModule
-  ]
+  declarations: [CartDetailedViewComponent, CartMinifiedViewComponent],
+  imports: [CommonModule],
 })
-export class CartModule { }
+export class CartModule {}

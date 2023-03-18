@@ -19,6 +19,7 @@ import {
 import { Router } from '@angular/router';
 
 import { RestService } from 'src/app/rest.service';
+import { CartService } from 'src/app/cart.service';
 @Component({
   selector: 'app-catalog-section',
   templateUrl: './catalog-section.component.html',
@@ -29,7 +30,10 @@ export class CatalogSectionComponent implements OnInit, OnChanges {
   products: product[] = [];
   images = [];
 
-  constructor(private restService: RestService) {}
+  constructor(
+    private restService: RestService,
+    private cartService: CartService
+  ) {}
 
   ngOnChanges(changes: SimpleChanges): void {
     console.log('onChanges Work');
@@ -74,6 +78,6 @@ export class CatalogSectionComponent implements OnInit, OnChanges {
   }
 
   onBtnAddToCartClicked(product: any) {
-    console.log('I am clicked', product);
+    this.cartService.addtoCart(product);
   }
 }
