@@ -1,0 +1,12 @@
+.fixed-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+@media screen and (min-height: 100vh) {
+  .fixed-footer {
+    position: static;
+    background-color: red;
+  }
+}

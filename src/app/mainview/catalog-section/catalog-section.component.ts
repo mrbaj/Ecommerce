@@ -72,4 +72,8 @@ export class CatalogSectionComponent implements OnInit, OnChanges {
         this.products = value;
       });
   }
+
+  onBtnAddToCartClicked(product: any) {
+    console.log('I am clicked', product);
+  }
 }

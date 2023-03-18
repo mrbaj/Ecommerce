@@ -1,5 +1,9 @@
+
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
+
+import { EventEmitter, Output } from '@angular/core';
+
 
 @Component({
   selector: 'app-display-card',
@@ -18,5 +22,11 @@ export class DisplayCardComponent {
 
   openFullView() {
     this.router.navigateByUrl(`/product/${this.productId}`);
+    }
+
+  @Output() btnAddToCart = new EventEmitter();
+
+  onClick() {
+    this.btnAddToCart.emit();
   }
 }

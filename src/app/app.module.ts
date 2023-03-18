@@ -18,7 +18,11 @@ import { MatInputModule } from '@angular/material/input';
 import { TopbarComponent } from './components/topbar/topbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
+
 import { ProductsdetailsModule } from './productsdetails/productsdetails.module';
+
+import { ProductViewPageComponent } from './components/product-view-page/product-view-page.component';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +30,7 @@ import { ProductsdetailsModule } from './productsdetails/productsdetails.module'
     CircleCardComponent,
     TopbarComponent,
     LoginComponent,
+    ProductViewPageComponent,
   ],
   imports: [
     BrowserModule,

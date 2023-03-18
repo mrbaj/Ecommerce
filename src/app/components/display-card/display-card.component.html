@@ -8,5 +8,17 @@
     <p>Price: {{ price }}</p>
     <mat-divider></mat-divider>
     <p>Save: {{ save }}</p>
+    <mat-divider></mat-divider>
+    <div class="d-flex justify-content-center align-items-center">
+      <button
+        type="button"
+        class="btn mt-3 fw-lighter fs-6"
+        style="background-color: var(--brand_blue); color: white"
+        mat-button
+        (click)="onClick()"
+      >
+        Add To Cart
+      </button>
+    </div>
   </mat-card-content>
 </mat-card>

@@ -17,7 +17,7 @@ describe('Login page', () => {
 
   it('should allow user to sign out', () => {
     // Assumes user is already logged in
-    cy.get('button[color="warn"]').click();
+    cy.contains('Sign Out').click();
     cy.url().should('eq', 'http://localhost:4200/login'); // Assumes successful logout should redirect to '/login'
   });
 });
