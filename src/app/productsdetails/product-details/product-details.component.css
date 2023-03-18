@@ -1,0 +1,42 @@
+.img-options {
+  max-width: 100px;
+  max-height: 100px;
+  margin: 10px;
+  border: 2px solid #c7e7f5;
+  cursor: pointer;
+}
+
+.active {
+  border: 3px solid #05abf3;
+}
+
+.options {
+  margin: 20px;
+}
+
+.flex-row {
+  display: flex;
+}
+
+h2 {
+  margin-top: 20px;
+  font-size: 45px;
+  color: #05abf3;
+}
+
+.blue {
+  color: #05abf3;
+}
+
+h3 {
+  margin-top: 10px;
+}
+
+.details {
+  margin: 20px;
+}
+
+.arrow {
+  padding-top: 6px;
+  cursor: pointer;
+}
