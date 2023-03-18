@@ -20,24 +20,26 @@
       <div role="button">Sign Up/Sign In</div>
     </div>
     <span class="px-1 fs-5 fw-lighter" style="color: #d9d9d9">|</span>
-    <div class="d-flex flex-row align-items-center">
-      <a routerLink="/cart">
-        <mat-icon
-          matBadge="0"
-          matBadgeColor="warn"
-          matBadgePosition="after"
-          class="px-1"
-          role="button"
-          >shopping_cart_outlined_icon
-        </mat-icon>
-        <ng-container *ngIf="totalItem != 0">
-          <div style="font-size: 10px" class="badge mb-1 bg-danger">
-            {{ totalItem }}
-          </div>
-        </ng-container>
-
-        <div class="header-item mb-1 px-1" role="button">Cart</div>
-      </a>
+    <div
+      type="button"
+      routerLink="cart"
+      class="d-flex flex-row align-items-center"
+      (click)="openCart()"
+    >
+      <mat-icon
+        matBadge="0"
+        matBadgeColor="warn"
+        matBadgePosition="after"
+        class="px-1"
+        role="button"
+        >shopping_cart_outlined_icon
+      </mat-icon>
+      <ng-container *ngIf="totalItem != 0">
+        <div style="font-size: 10px" class="badge mb-1 bg-danger">
+          {{ totalItem }}
+        </div>
+      </ng-container>
+      <div class="header-item mb-1 px-1" role="button">Cart</div>
     </div>
   </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { CartService } from 'src/app/cart.service';
 
 @Component({
@@ -8,11 +9,15 @@ import { CartService } from 'src/app/cart.service';
 })
 export class HeaderComponent {
   public totalItem: number = 0;
-  constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService, private router: Router) {}
 
   ngOnInit(): void {
     this.cartService.getProducts().subscribe((res) => {
       this.totalItem = res.length;
     });
+  }
+
+  openCart() {
+    this.router.navigateByUrl(`/cart`);
   }
 }
