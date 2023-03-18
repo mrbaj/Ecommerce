@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-display-card',
@@ -11,6 +11,11 @@ export class DisplayCardComponent {
   @Input() price?: number;
   @Input() save?: number;
   @Input() percentage?: number;
+  @Output() btnAddToCart = new EventEmitter();
 
   constructor() {}
+
+  onClick() {
+    this.btnAddToCart.emit();
+  }
 }

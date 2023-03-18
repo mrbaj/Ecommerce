@@ -21,3 +21,7 @@ p {
   padding: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+body {
+  min-height: 100vh;
+}

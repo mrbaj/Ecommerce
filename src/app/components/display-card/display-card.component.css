@@ -53,6 +53,10 @@ img {
   object-fit: "contain";
 }
 
+button {
+  cursor: pointer !important;
+}
+
 @media (max-width: 280px) {
   .flex-card-corner-div {
     top: 0;
