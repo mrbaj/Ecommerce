@@ -37,6 +37,14 @@ export class RestService {
     );
   }
 
+  getProduct(productId: number): Observable<product> {
+    return this.http.get<ProductData>('./assets/products.json').pipe(
+      map((a) => a.data),
+      map((a) => a.filter((a) => a.id == productId)),
+      map((a) => a[0])
+    );
+  }
+
   getProductImages(): Observable<[ProductImage]> {
     return this.http
       .get<ProductImageData>('./assets/productimages.json')

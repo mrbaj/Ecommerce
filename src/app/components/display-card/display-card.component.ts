@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-display-card',
@@ -11,6 +12,11 @@ export class DisplayCardComponent {
   @Input() price?: number;
   @Input() save?: number;
   @Input() percentage?: number;
+  @Input() productId?: number;
 
-  constructor() {}
+  constructor(private router: Router) {}
+
+  openFullView() {
+    this.router.navigateByUrl(`/product/${this.productId}`);
+  }
 }

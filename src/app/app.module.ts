@@ -10,7 +10,6 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 
 import { CircleCardComponent } from './components/circle-card/circle-card.component';
-import { ProductViewComponent } from './components/product-view/product-view.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RestService } from './rest.service';
 import { DataService } from './data.service';
@@ -19,12 +18,12 @@ import { MatInputModule } from '@angular/material/input';
 import { TopbarComponent } from './components/topbar/topbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
+import { ProductsdetailsModule } from './productsdetails/productsdetails.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     CircleCardComponent,
-    ProductViewComponent,
     TopbarComponent,
     LoginComponent,
   ],
@@ -40,6 +39,7 @@ import { FormsModule } from '@angular/forms';
     MatInputModule,
     MatButtonModule,
     FormsModule,
+    ProductsdetailsModule,
   ],
   providers: [RestService, DataService],
   bootstrap: [AppComponent],
