@@ -18,6 +18,16 @@ interface CategoryData {
   meta: {};
 }
 
+interface Users {
+  users: [User];
+}
+
+interface User {
+  username: string;
+  password: string;
+  isAdmin: boolean;
+}
+
 interface AllCategoryData {
   data: [allcategory];
   meta: {};
