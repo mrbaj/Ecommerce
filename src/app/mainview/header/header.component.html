@@ -1,45 +1,76 @@
-<div
-  class="container w-75 p-0 d-flex justify-content-between align-items-center"
->
-  <div class="logo">
-    <div class="logo-icon-parent">
-      <mat-icon class="logo-icon">menu</mat-icon>
-    </div>
-    <div class="header-item">MegaMart</div>
-  </div>
-  <div class="d-flex flex-row w-50 align-items-center justify-content-between">
-    <div
-      class="form-control d-flex px-3 my-3 w-50 align-items-center justify-content-between input-container"
-    >
-      <mat-icon matSuffix>search</mat-icon>
-      <input class="w-100 border-0 px-3" type="text" placeholder="Search" />
-      <mat-icon matPrefix>list_outlined_icon</mat-icon>
-    </div>
-    <div class="d-flex flex-row align-items-center">
-      <mat-icon class="px-1" role="button">person_2_outlined_icon</mat-icon>
-      <div role="button">Sign Up/Sign In</div>
-    </div>
-    <span class="px-1 fs-5 fw-lighter" style="color: #d9d9d9">|</span>
-    <div
+<nav class="navbar navbar-expand-lg">
+  <div
+    class="container w-75 p-0 d-flex justify-content-between align-items-center"
+  >
+    <button
+      class="navbar-toggler"
       type="button"
-      routerLink="cart"
-      class="d-flex flex-row align-items-center"
-      (click)="openCart()"
+      data-toggle="collapse"
+      data-target="#navbarTogglerView"
+      aria-controls="navbarTogglerView"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
     >
-      <mat-icon
-        matBadge="0"
-        matBadgeColor="warn"
-        matBadgePosition="after"
-        class="px-1"
-        role="button"
-        >shopping_cart_outlined_icon
-      </mat-icon>
-      <ng-container *ngIf="totalItem != 0">
-        <div style="font-size: 10px" class="badge mb-1 bg-danger">
-          {{ totalItem }}
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="logo">
+      <div class="logo-icon-parent">
+        <mat-icon class="logo-icon">dashboard</mat-icon>
+      </div>
+      <div class="header-item">MegaMart</div>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarTogglerView">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <div
+          class="d-flex flex-row w-100 align-items-center justify-content-between"
+        >
+          <li class="nav-item">
+            <div
+              class="form-control d-flex px-3 my-3 w-50 align-items-center justify-content-between input-container"
+            >
+              <mat-icon matSuffix>search</mat-icon>
+              <input
+                class="w-100 border-0 px-3"
+                type="text"
+                placeholder="Search"
+              />
+              <mat-icon matPrefix>list_outlined_icon</mat-icon>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="d-flex flex-row align-items-center">
+              <mat-icon class="px-1" role="button"
+                >person_2_outlined_icon</mat-icon
+              >
+              <div role="button">Sign Up/Sign In</div>
+            </div>
+          </li>
+          <span class="px-1 fs-5 fw-lighter" style="color: #d9d9d9">|</span>
+          <li class="nav-item">
+            <div
+              type="button"
+              routerLink="cart"
+              class="d-flex flex-row align-items-center"
+              (click)="openCart()"
+            >
+              <mat-icon
+                matBadge="0"
+                matBadgeColor="warn"
+                matBadgePosition="after"
+                class="px-1"
+                role="button"
+                >shopping_cart_outlined_icon
+              </mat-icon>
+              <ng-container *ngIf="totalItem != 0">
+                <div style="font-size: 10px" class="badge mb-1 bg-danger">
+                  {{ totalItem }}
+                </div>
+              </ng-container>
+              <div class="header-item mb-1 px-1" role="button">Cart</div>
+            </div>
+          </li>
         </div>
-      </ng-container>
-      <div class="header-item mb-1 px-1" role="button">Cart</div>
+      </ul>
     </div>
   </div>
-</div>
+</nav>
