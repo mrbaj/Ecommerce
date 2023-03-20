@@ -8,6 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
+import { MatBadgeModule } from '@angular/material/badge';
 
 import { CircleCardComponent } from './components/circle-card/circle-card.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -23,7 +24,6 @@ import { ProductsdetailsModule } from './productsdetails/productsdetails.module'
 
 import { ProductViewPageComponent } from './components/product-view-page/product-view-page.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,8 +33,8 @@ import { ProductViewPageComponent } from './components/product-view-page/product
     ProductViewPageComponent,
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    BrowserModule,
     BrowserAnimationsModule,
     MatIconModule,
     MatCardModule,
@@ -45,6 +45,7 @@ import { ProductViewPageComponent } from './components/product-view-page/product
     MatButtonModule,
     FormsModule,
     ProductsdetailsModule,
+    MatBadgeModule,
   ],
   providers: [RestService, DataService],
   bootstrap: [AppComponent],
