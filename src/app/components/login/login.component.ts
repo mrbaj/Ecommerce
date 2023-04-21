@@ -42,4 +42,9 @@ export class LoginComponent implements OnInit {
     // logic to sign out the user
     this.router.navigate(['/login']);
   }
+  sumtwonumbers(a: number, b: number) {
+    return a + b;
+  }
+  //write test cases for this function
+  //test cases should be written in a separate file
 }

@@ -15,4 +15,8 @@ describe('LoginComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
+  // write test case for sumtwonumbers function
+  it('should return sum of two numbers', () => {
+    expect(component.sumtwonumbers(2, 2)).toEqual(4);
+  });
 });

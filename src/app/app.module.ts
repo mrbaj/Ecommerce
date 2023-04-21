@@ -23,6 +23,7 @@ import { FormsModule } from '@angular/forms';
 import { ProductsdetailsModule } from './productsdetails/productsdetails.module';
 
 import { ProductViewPageComponent } from './components/product-view-page/product-view-page.component';
+import { FooterNewComponent } from './components/footer-new/footer-new.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ProductViewPageComponent } from './components/product-view-page/product
     TopbarComponent,
     LoginComponent,
     ProductViewPageComponent,
+    FooterNewComponent,
   ],
   imports: [
     AppRoutingModule,
